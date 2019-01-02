@@ -2,18 +2,18 @@ import path from 'path';
 import webpackConfig from '../webpack.config.babel';
 
 const middleware_options = {
-    publicPath:webpackConfig.output.publicPath,
     contentBase:path.resolve(__dirname, './dist'),
     compress: true,
     hot: true,
-    open: true,
-    port: 8080,
     inline: true,
     noInfo: false,
+    open: true,
     overlay: {
         warnings: true,
         errors: true
     },
+    port: 8080,
+    publicPath:webpackConfig.output.publicPath,
     stats: {
         colors: true,
         hash: false,

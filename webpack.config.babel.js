@@ -68,7 +68,8 @@ const config = {
     ],
     stats: {
         children: false
-    }
+    },
+    mode: 'none'
 };
 
 export default config;

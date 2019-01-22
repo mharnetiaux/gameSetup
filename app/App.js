@@ -10,7 +10,10 @@ class App extends Component{
 
     render(){
         return (
-            <div>made it</div>
+            <main>
+                <section><span className="circle"></span></section>
+                <section><span className="square"></span></section>
+            </main>
         )
     }
 }

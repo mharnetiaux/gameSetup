@@ -1,4 +1,4 @@
-.spinObject(@startDeg, @finishDeg) {
+.spinObject(@name: spin, @startDeg: 0deg, @finishDeg: 360deg, @duration: 3s, @count: 1, @timing: linear) {
     @keyframes spin {
         0% {
             transform: rotate(@startDeg);
@@ -8,9 +8,9 @@
         }
     }
     .animate(
-        @name: spin,
-        @duration: 3s,
-        @count: 1,
-        @timing: linear
+        @name: @name,
+        @duration: @duration,
+        @count: @count,
+        @timing: @timing
     )
 }

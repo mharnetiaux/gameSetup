@@ -1,6 +1,7 @@
 import './styles/app.less';
 import React, {Component} from 'react';
 import {render} from 'react-dom';
+import './keyboard/touch/Direction.js';
 
 class App extends Component{
     constructor(){

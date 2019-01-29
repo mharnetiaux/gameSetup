@@ -8,8 +8,8 @@
     @finish: 100%,
     @duration: 10s,
     @count: 1,
-    @timing: linear,
-    @mode: forwards) {
+    @timing: linear) {
+
     @keyframes moveRight {
         0%   {left: @start;}
         25%  {left: @quarter}
@@ -17,11 +17,11 @@
         75%  {left: @third}
         100% {left: @finish}
     }
+
     .animate(
         @name: @name,
         @duration: @duration,
         @count: @count,
-        @timing: @timing,
-        @mode: @mode
+        @timing: @timing
     )
 }

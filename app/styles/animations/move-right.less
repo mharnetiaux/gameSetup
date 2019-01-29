@@ -1,16 +1,27 @@
-.moveObjectRight(@name: right, @duration: 3s, @count: 1, @timing: linear) {
-    position: relative;
-    @keyframes right {
-        0%   {left: 0;}
-        25%  {left: 10rem}
-        50%  {left: 20rem;}
-        75%  {left: 40rem;}
-        100% {left: 60rem;}
+.moveObjectRight(
+    @name: moveRight,
+    @defaultLeft: 0,
+    @start: 0,
+    @quarter: 25%,
+    @half: 50%,
+    @third: 75%,
+    @finish: 100%,
+    @duration: 10s,
+    @count: 1,
+    @timing: linear,
+    @mode: forwards) {
+    @keyframes moveRight {
+        0%   {left: @start;}
+        25%  {left: @quarter}
+        50%  {left: @half}
+        75%  {left: @third}
+        100% {left: @finish}
     }
     .animate(
         @name: @name,
         @duration: @duration,
         @count: @count,
-        @timing: @timing
+        @timing: @timing,
+        @mode: @mode
     )
 }

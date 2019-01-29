@@ -1,0 +1,16 @@
+.moveObjectRight(@name: right, @duration: 3s, @count: 1, @timing: linear) {
+    position: relative;
+    @keyframes right {
+        0%   {left: 0;}
+        25%  {left: 10rem}
+        50%  {left: 20rem;}
+        75%  {left: 40rem;}
+        100% {left: 60rem;}
+    }
+    .animate(
+        @name: @name,
+        @duration: @duration,
+        @count: @count,
+        @timing: @timing
+    )
+}

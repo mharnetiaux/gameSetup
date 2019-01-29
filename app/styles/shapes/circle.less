@@ -1,6 +1,9 @@
 .circle {
     background: url(~"/images/wheel-200.png") no-repeat center;
     background-size: contain;
+    border: 2px dotted white;
     border-radius: 50%;
     .spinObject(@count:1);
+    width: calc(@spacingDouble ~'*'~`5`);
+    height: calc(@spacingDouble ~'*'~`5`);
 }

@@ -12,6 +12,7 @@ class App extends Component{
         return (
             <main>
                 <section><span className="circle"></span></section>
+                <section><span className="rectangle"></span></section>
                 <section><span className="square"></span></section>
             </main>
         )

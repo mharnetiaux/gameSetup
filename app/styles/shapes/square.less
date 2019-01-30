@@ -18,7 +18,6 @@
         width: 90%;
         height: 2rem;
         left: 1rem;
-        outline: 2px solid yellow;
         content: '';
         display: block;
         position: absolute;
@@ -28,10 +27,12 @@
     }
 
     &::before {
-        bottom: calc(100vh~'-'100%~'+'@spacing);
+        box-shadow: inset 0px 31px 38px -19px rgba(0,0,0,0.31);
+        bottom: 5rem;
     }
 
     &::after {
+        box-shadow: inset -4px -44px 41px -39px rgba(0,0,0,0.63);
         bottom: 0;
     }
 }

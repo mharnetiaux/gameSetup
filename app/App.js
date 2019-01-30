@@ -2,6 +2,11 @@ import './styles/app.less';
 import React, {Component} from 'react';
 import {render} from 'react-dom';
 import './keyboard/touch/Direction.js';
+import styled from 'styled-components';
+
+const MainStyle = styled.main`
+    background: red;
+`;
 
 class App extends Component{
     constructor(){
@@ -11,6 +16,7 @@ class App extends Component{
 
     render(){
         return (
+            <MainStyle>
             <main>
                 <section>
                     <span className="obj square">
@@ -24,10 +30,11 @@ class App extends Component{
                     </span>
                 </section>
             </main>
+            </MainStyle>
         )
     }
 }
 
 render((
-    <App />
+    <App/>
 ), document.getElementById('root'));

@@ -11,12 +11,20 @@
     box-shadow: inset -6px -48px 87px 5px rgba(0,0,0,0.1);
     border-radius: 50%;
     border: 3px solid lighten(@black, 15%);
-     .circleSpin;
+    .circleSpin;
+
+    &:last-child,
+    &:first-child {
+        position: relative;
+        width: 5.3rem;
+        height: 5.3rem;
+    }
 
     &:last-child {
-        width: 53px;
-        height: 53px;
         top: -1.5rem;
-        position: relative;
+    }
+
+    &:first-child {
+        top: -0.75rem;
     }
 }

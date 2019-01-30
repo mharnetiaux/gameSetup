@@ -18,9 +18,13 @@ class App extends Component{
         return (
             <MainStyle>
             <main>
-                <section>
-                    <span className="obj square">
-                        <span className="obj rectangle">
+                <section className="foundation">
+                    <span className="obj square house"></span>
+                </section>
+
+                <section className="machine">
+                    <span className="obj square tank">
+                        <span className="obj rectangle wheels">
                             <span className="obj circle"></span>
                             <span className="obj circle"></span>
                             <span className="obj circle"></span>

@@ -8,7 +8,7 @@ main {
 }
 
 
-section {
+.machine {
     display: flex;
     align-items: flex-end;
     background-color: fade(@black, 85%);
@@ -16,6 +16,15 @@ section {
     min-height: 50rem;
     margin-bottom: @spacing;
     outline: 2px solid @black;
+}
+
+
+.foundation {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 25rem;
+    width: 100%;
 }
 
 @import "shapes/_all.less";

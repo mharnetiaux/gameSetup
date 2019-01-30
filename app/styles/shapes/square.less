@@ -1,10 +1,11 @@
-.squareObj(@width:0, @height:0, @imageUrl:'') {
+.squareObj(@width:0, @height:0, @imageUrl:'', @animation: '') {
     background: url(~'@{imageUrl}') no-repeat bottom center;
     background-size: contain;
     position: relative;
     width: @width;
     height: @height;
     .moveObjectRight(@finish: calc(~'100% - @{width}'), @duration: 5s);
+    animation: @animation;
 }
 
 
@@ -20,8 +21,7 @@
 
 
     &.house {
-        .squareObj(@width: 75rem, @height: 25rem, @imageUrl: ~"/images/bg-capital.png");
-        animation: none;
+        .squareObj(@width: 75rem, @height: 25rem, @imageUrl: ~"/images/bg-capital.png", @animation: none);
         left: 0;
         right: 0;
         margin-right: auto;

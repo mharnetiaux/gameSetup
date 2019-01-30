@@ -10,22 +10,31 @@
 
 
 .square {
-    top:2rem;
     display: flex;
-    align-items: flex-end;
-    z-index: 2;
 
     &.tank {
+        top:2rem;
+        align-items: flex-end;
+        z-index: 2;
         .squareObj(@width: 34rem, @height: 34rem, @imageUrl: ~"/images/tankx200.png");
     }
 
 
     &.house {
-        .squareObj(@width: 75rem, @height: 25rem, @imageUrl: ~"/images/bg-capital.png", @animation: none);
+        .squareObj(@width: 75rem, @height: 35rem, @imageUrl: ~"/images/bg-capital.png", @animation: none);
+        position: absolute;
+        bottom: 0;
+        background-position: top center;
         left: 0;
         right: 0;
         margin-right: auto;
         margin-left: auto;
+        z-index: 2;
+
+        &::after,
+        &::before {
+            content: none;
+        }
     }
 
     &::after,

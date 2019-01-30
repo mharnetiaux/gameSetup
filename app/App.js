@@ -4,10 +4,6 @@ import {render} from 'react-dom';
 import './keyboard/touch/Direction.js';
 import styled from 'styled-components';
 
-const MainStyle = styled.main`
-    background: red;
-`;
-
 class App extends Component{
     constructor(){
         super();
@@ -16,7 +12,6 @@ class App extends Component{
 
     render(){
         return (
-            <MainStyle>
             <main>
                 <section className="foundation">
                     <span className="obj square house"></span>
@@ -34,7 +29,6 @@ class App extends Component{
                     </span>
                 </section>
             </main>
-            </MainStyle>
         )
     }
 }

@@ -1,7 +1,42 @@
-.square {
+.squareObj() {
+   background: url(~"/images/tankx200.png") no-repeat bottom center;
+   background-size: contain;
+   justify-content: space-evenly;
+   @squareWidth: calc(@spacingDouble ~'*'~`17`);
+   @squareHeight: calc(@spacingDouble ~'*'~`17`);
    position: relative;
-   border: 2px dotted white;
-   .moveObjectLeft();
-   width: calc(@spacingDouble ~'*'~`5`);
-   height: calc(@spacingDouble ~'*'~`5`);
+   width: @squareWidth;
+   height: @squareHeight;
+   .moveObjectRight(@finish: calc(~'100% - @{squareWidth}'), @duration: 20s);
+}
+
+.square {
+   display: flex;
+   align-items: flex-end;
+   .squareObj;
+
+   &::after,
+   &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      z-index: 1;
+      border-bottom-right-radius: 2.5rem;
+      border-bottom-left-radius: 2.5rem;
+   }
+
+   &::before {
+
+      width: 96%;
+      box-shadow: inset 28px -30px 55px -51px @black;
+      height: 2rem;
+      bottom: 5rem;
+   }
+
+
+   &::after {
+      width: 93%;
+      box-shadow: inset -6px -62px 87px -69px @black;
+      height: 3rem;
+   }
 }

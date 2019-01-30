@@ -1,9 +1,15 @@
-.rectangle {
-    //background: url(~"/images/tankx200.png") no-repeat center;
-    //background-size: contain;
+.rectangleObj() {
+    @rectWidth: calc(@spacingDouble ~'*'~`16`);
+    @rectHeight: calc(@spacingDouble ~'*'~`3`);
     position: relative;
-    border: 2px dotted white;
-    width: calc(@spacingDouble ~'*'~`15`);
-    height: calc(@spacingDouble ~'*'~`10`);
-    .moveObjectRight(@defaultLeft:0);
+    width: @rectWidth;
+    height: @rectHeight;
+}
+
+.rectangle {
+    box-shadow: inset 0px 35px 30px -14px rgba(0,0,0,0.7);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    .rectangleObj;
 }

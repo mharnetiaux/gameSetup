@@ -1,9 +1,22 @@
+.circleSpin() {
+    //opacity: 0.7;
+    background: url(~"/images/wheelx200.png") no-repeat center;
+    background-size: cover;
+    height: calc(@spacingDouble ~'*'~`3`);
+    .spinObject(@duration: 1s, @count: 20);
+    width: calc(@spacingDouble ~'*'~`3`);
+}
+
 .circle {
-    //background: url(~"/images/wheel-200.png") no-repeat center;
-    //background-size: contain;
-    border: 2px dotted white;
+    box-shadow: inset -6px -48px 87px 5px rgba(0,0,0,0.1);
     border-radius: 50%;
-    height: calc(@spacingDouble ~'*'~`5`);
-    .spinObject();
-    width: calc(@spacingDouble ~'*'~`5`);
+    border: 3px solid lighten(@black, 15%);
+     .circleSpin;
+
+    &:last-child {
+        width: 53px;
+        height: 53px;
+        top: -1.5rem;
+        position: relative;
+    }
 }

@@ -1,4 +1,4 @@
-.spinObject(@name: spin, @startDegree: 0deg, @finishDegree: 360deg, @duration: 3s, @count: 1, @timing: linear) {
+.spinObject(@name: spin, @startDegree: 0deg, @finishDegree: 360deg, @duration: 0, @count: 0, @timing: linear, @mode: none) {
     @keyframes spin {
         0% {
             transform: rotate(@startDegree);
@@ -11,6 +11,7 @@
         @name: @name,
         @duration: @duration,
         @count: @count,
-        @timing: @timing
+        @timing: @timing,
+        @mode: @mode
     )
 }

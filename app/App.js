@@ -12,9 +12,17 @@ class App extends Component{
     render(){
         return (
             <main>
-                <section><span className="circle"></span></section>
-                <section><span className="rectangle"></span></section>
-                <section><span className="square"></span></section>
+                <section>
+                    <span className="obj square">
+                        <span className="obj rectangle">
+                            <span className="obj circle"></span>
+                            <span className="obj circle"></span>
+                            <span className="obj circle"></span>
+                            <span className="obj circle"></span>
+                            <span className="obj circle"></span>
+                        </span>
+                    </span>
+                </section>
             </main>
         )
     }

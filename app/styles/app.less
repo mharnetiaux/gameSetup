@@ -11,20 +11,12 @@ main {
 
 
 section {
-    background: @black;
+    background-color: fade(@black, 85%);
     position: relative;
     width: 100%;
-    height: 50rem;
+    min-height: 50rem;
     margin-bottom: @spacing;
     outline: 2px solid @black;
-    display: flex;
-    align-items: center;
-}
-
-span:not(.mainWrapper) {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 @import "shapes/_all.less";

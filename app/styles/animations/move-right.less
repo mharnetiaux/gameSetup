@@ -1,21 +1,15 @@
 .moveObjectRight(
     @name: moveRight,
     @start: 0,
-    @quarter: 25%,
-    @half: 50%,
-    @third: 75%,
-    @finish: 0,
+    @finish: 100%,
     @duration: 2s,
     @count: 1,
     @timing: linear,
     @mode: forwards) {
 
     @keyframes moveRight {
-        0%   {left: @start;}
-        25%  {left: @quarter;}
-        50%  {left: @half;}
-        75%  {left: @third;}
-        100% {left: @finish;}
+       from {left: @start;}
+       to {left: @finish;}
     }
 
     .animate(

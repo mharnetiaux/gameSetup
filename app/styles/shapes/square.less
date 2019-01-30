@@ -1,38 +1,37 @@
 .squareObj(@width:0, @height:0, @imageUrl:'') {
-   background: url(~'@{imageUrl}') no-repeat bottom center;
-   background-size: contain;
-   position: relative;
-   width: @width;
-   height: @height;
-  .moveObjectRight(@finish: calc(~'100% - @{width}'), @duration: 10s);
+    background: url(~'@{imageUrl}') no-repeat bottom center;
+    background-size: contain;
+    position: relative;
+    width: @width;
+    height: @height;
+    .moveObjectRight(@finish: calc(~'100% - @{width}'), @duration: 10s);
 }
 
 
 .square {
-   display: flex;
-   align-items: flex-end;
-   .squareObj(@width: 34rem, @height: 34rem, @imageUrl: ~"/images/tankx200.png");
+    display: flex;
+    align-items: flex-end;
+    .squareObj(@width: 34rem, @height: 34rem, @imageUrl: ~"/images/tankx200.png");
 
-   &::after,
-   &::before {
-      content: '';
-      display: block;
-      position: absolute;
-      z-index: 1;
-      border-bottom-right-radius: 2.5rem;
-      border-bottom-left-radius: 2.5rem;
-   }
+    &::after,
+    &::before {
+        width: 90%;
+        height: 2rem;
+        left: 1rem;
+        outline: 2px solid yellow;
+        content: '';
+        display: block;
+        position: absolute;
+        z-index: 1;
+        border-bottom-right-radius: 2.5rem;
+        border-bottom-left-radius: 2.5rem;
+    }
 
-   &::before {
-      width: 96%;
-      box-shadow: inset 28px -30px 55px -51px @black;
-      height: 2rem;
-      bottom: 5rem;
-   }
-  
-   &::after {
-      width: 93%;
-      box-shadow: inset -6px -62px 87px -69px @black;
-      height: 3rem;
-   }
+    &::before {
+        bottom: calc(100vh~'-'100%~'+'@spacing);
+    }
+
+    &::after {
+        bottom: 0;
+    }
 }

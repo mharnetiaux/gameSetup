@@ -12,7 +12,7 @@ class App extends Component{
 
     render(){
         return (
-            <main>
+            <section>
                 <section className="foundation">
                     <span className="obj square house"></span>
                 </section>
@@ -28,7 +28,7 @@ class App extends Component{
                         </span>
                     </span>
                 </section>
-            </main>
+            </section>
         )
     }
 }

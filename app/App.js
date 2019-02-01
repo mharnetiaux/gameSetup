@@ -2,6 +2,8 @@ import './styles/app.less';
 import React, {Component} from 'react';
 import {render} from 'react-dom';
 import Direction from './keyboard/touch/Direction.js';
+import House from './components/House.js';
+import Tank from './components/Tank.js';
 import "./sandBox/index.js";
 //import styled from 'styled-components';
 
@@ -15,18 +17,8 @@ class App extends Component{
         return (
             <section className="gameWrapper">
                 <section className="gameArena">
-                    <section className="foundation">
-                        <span className="house"></span>
-                    </section>
-                    <span className="tank">
-                        <span className="axel">
-                            <span className="wheel"></span>
-                            <span className="wheel"></span>
-                            <span className="wheel"></span>
-                            <span className="wheel"></span>
-                            <span className="wheel"></span>
-                        </span>
-                    </span>
+                    <House/>
+                    <Tank/>
                 </section>
                 <section className="gamePad">
                     <Direction/>

@@ -1,8 +1,9 @@
 import './styles/app.less';
 import React, {Component} from 'react';
 import {render} from 'react-dom';
-import './keyboard/touch/Direction.js';
-import styled from 'styled-components';
+import Direction from './keyboard/touch/Direction.js';
+import "./sandBox/index.js";
+//import styled from 'styled-components';
 
 class App extends Component{
     constructor(){
@@ -12,21 +13,23 @@ class App extends Component{
 
     render(){
         return (
-            <section>
-                <section className="foundation">
-                    <span className="obj square house"></span>
-                </section>
-
-                <section className="machine">
-                    <span className="obj square tank">
-                        <span className="obj rectangle wheels">
-                            <span className="obj circle"></span>
-                            <span className="obj circle"></span>
-                            <span className="obj circle"></span>
-                            <span className="obj circle"></span>
-                            <span className="obj circle"></span>
+            <section className="gameWrapper">
+                <section className="gameArena">
+                    <section className="foundation">
+                        <span className="house"></span>
+                    </section>
+                    <span className="tank">
+                        <span className="axel">
+                            <span className="wheel"></span>
+                            <span className="wheel"></span>
+                            <span className="wheel"></span>
+                            <span className="wheel"></span>
+                            <span className="wheel"></span>
                         </span>
                     </span>
+                </section>
+                <section className="gamePad">
+                    <Direction/>
                 </section>
             </section>
         )

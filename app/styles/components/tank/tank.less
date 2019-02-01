@@ -1,0 +1,32 @@
+.tank {
+    display: flex;
+    top:10rem;
+    align-items: flex-end;
+    z-index: 2;
+    .gameObj(@width: 34rem, @height: 34rem, @imageUrl: ~"/images/tankx200.png", @animation: none);
+
+    &::after,
+    &::before {
+        width: 90%;
+        height: 2rem;
+        left: 1rem;
+        content: '';
+        display: block;
+        position: absolute;
+        z-index: 1;
+        border-bottom-right-radius: 2.5rem;
+        border-bottom-left-radius: 2.5rem;
+    }
+
+    &::before {
+        box-shadow: inset 0 31px 38px -29px rgba(0,0,0,0.5);
+        bottom: 5rem;
+        height: 3rem;
+        transform: scale(-1, -1);
+    }
+
+    &::after {
+        box-shadow: inset -4px -44px 41px -42px rgba(0,0,0,0.9);
+        bottom: 1rem;
+    }
+}

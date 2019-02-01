@@ -1,18 +1,12 @@
+@import "animations/_all.less";
+@import "controls/_all.less";
+@import "mixins/_all.less";
 @import "resets/global-reset.less";
 @import "variables/_all.less";
-@import "animations/_all.less";
-@import "mixins/animate.less";
 
 main {
+    background-color: @blue-bg;
     position: relative;
 }
 
-.machine {
-    outline: 2px solid red;
-    background: yellow;
-    position: relative;
-    max-width: 35%;
-}
-
-
-@import "shapes/_all.less";
+@import "components/_all.less";

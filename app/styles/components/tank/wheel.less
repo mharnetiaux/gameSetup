@@ -1,19 +1,15 @@
-.circleSpin() {
-    opacity: 0.7;
-    background: url(~"/images/wheelx200.png") no-repeat center;
-    background-size: cover;
-    height: 5rem;
-    .spinObject(@duration: 0.7s, @count: 7);
-    width: 5rem;
-}
-
-.circle {
+.wheel {
     box-shadow: inset -6px -48px 87px 5px rgba(0,0,0,0.1);
     border-radius: 50%;
     border: 6px dotted lighten(@black, 60%);
     display: inline-block;
     position: relative;
-    .circleSpin;
+    opacity: 0.7;
+    background: url(~"/images/wheelx200.png") no-repeat center;
+    background-size: cover;
+    height: 5rem;
+    .spin(@duration: 0.7s, @count: 1);
+    width: 5rem;
 
     &::after {
         opacity: 0.7;

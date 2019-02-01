@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import RightArrow from './Right';
+
 
 class Direction extends Component{
     constructor(){
@@ -8,8 +10,8 @@ class Direction extends Component{
 
     render(){
         return (
-           <nav>
-               hello
+           <nav className="controls">
+               <RightArrow/>
            </nav>
         )
     }

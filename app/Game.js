@@ -2,9 +2,7 @@ import './styles/app.less';
 import React, {Component} from 'react';
 import {render} from 'react-dom';
 import Direction from './controls/touch/Direction.js';
-import House from './components/House.js';
-import Tank from './components/Tank.js';
-
+import GameArena from './components/GameArena.js';
 
 class Game extends Component{
     constructor(){
@@ -15,13 +13,8 @@ class Game extends Component{
     render(){
         return (
             <section className="gameWrapper">
-                <section className="gameArena">
-                    <House/>
-                    <Tank/>
-                </section>
-                <section className="gamePad">
-                    <Direction/>
-                </section>
+                <GameArena/>
+                <Direction/>
             </section>
         )
     }

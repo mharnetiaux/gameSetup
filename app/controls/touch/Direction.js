@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import RightArrow from './Right';
+import Right from './Right';
 
 
 class Direction extends Component{
@@ -11,7 +11,7 @@ class Direction extends Component{
     render(){
         return (
            <nav className="controls">
-               <RightArrow/>
+               <Right/>
            </nav>
         )
     }

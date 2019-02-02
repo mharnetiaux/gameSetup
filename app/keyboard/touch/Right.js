@@ -6,7 +6,7 @@ class Right extends Component{
         this.moveRight = this.moveRight.bind(this);
         this.stop = this.stop.bind(this);
         this.state = {
-            trans: 2,
+            transStart: 0,
             property: 'transform'
         };
     }
@@ -17,11 +17,12 @@ class Right extends Component{
               keyCode = e.keyCode;
 
         if(keyCode === 39) {
-            this.setState({trans: this.state.trans += 2});
-            tank.style[this.state.property] = 'translateX(' + this.state.trans + 'rem)';
+            this.setState({transStart: this.state.transStart += 1});
+            tank.style[this.state.property] = 'translateX(' + this.state.transStart + 'rem)';
             tank.classList.add('move-right');
             Object.values(wheel).forEach((i) => {
                 i.classList.add("spin");
+                i.classList.remove("autoSpin");
             });
         }
     }

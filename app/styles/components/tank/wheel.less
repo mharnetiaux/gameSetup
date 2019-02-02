@@ -1,12 +1,18 @@
 .wheel {
     border-radius: 50%;
+    border:1px solid @black;
     display: inline-block;
     position: relative;
     background: url(~"/images/wheelx200.png") no-repeat center;
     background-size: contain;
-    height: 6rem;
-    width: 6rem;
-    top: -0.5rem;
+    height: 3.5rem;
+    width: 3.5rem;
+
+    &:first-child,
+    &:last-child {
+        height:2.75rem;
+        width: 2.75rem;
+    }
 
     &.spin {
         .spin(@duration: 1s, @count: infinite);

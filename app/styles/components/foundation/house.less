@@ -1,14 +1,21 @@
 .foundation {
+    position: fixed;
+    width:100%;
+    height: 100%;
+
+    &::before {
+        opacity: 0.1;
+        background-color: black;
+        position: absolute;
+        content:'';
+        width: 100%;
+        height:100%;
+        z-index: 1;
+    }
+
     .house {
         display: flex;
-        bottom: -0.5rem;
-        .gameObj(@width: 75rem, @height: 25rem, @imageUrl: ~"/images/bg-capital.png");
+        .gameObj(@width: 20rem, @height: 10rem, @imageUrl: ~"/images/bg-capital.png");
         position: absolute;
-        background-position: top center;
-        left: 0;
-        right: 0;
-        margin-right: auto;
-        margin-left: auto;
-        z-index: 2;
     }
 }

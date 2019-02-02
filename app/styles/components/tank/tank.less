@@ -1,8 +1,9 @@
 .tank {
-    display: flex;
-    align-items: flex-end;
-    z-index: 2;
-    .gameObj(@width: 17.5rem, @height: 10rem, @imageUrl: ~"/images/tankx200.png");
+    .objImage(
+        @width: 17.5rem,
+        @height: 10rem, @url: ~"/images/tankx200.png",
+        @alignment: flex-end,
+        @position: relative);
     bottom: -6rem;
 
     &::after {

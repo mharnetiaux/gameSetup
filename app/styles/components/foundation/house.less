@@ -20,8 +20,11 @@
     }
 
     .house {
-        display: flex;
-        .gameObj(@width: 20rem, @height: 10rem, @imageUrl: ~"/images/bg-capital.png");
-        position: absolute;
+        .objImage(
+            @width: 20rem,
+            @height: 10rem,
+            @url: "/images/bg-capital.png",
+            @position: absolute
+        );
     }
 }

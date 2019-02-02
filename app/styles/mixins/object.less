@@ -1,7 +1,18 @@
-.gameObj(@width:0, @height:0, @imageUrl:none) {
-    background: url(~'@{imageUrl}') no-repeat;
-    background-size: contain;
-    position: relative;
-    width: @width;
-    height: @height;
+.objImage(
+    @display: flex,
+    @bg-size: contain,
+    @bg-repeat: no-repeat,
+    @bg-position: center,
+    @width:0,
+    @height:0,
+    @url:"<insert proper url>",
+    @alignment: normal,
+    @position:inherit) {
+        background: url(~'@{url}') @bg-repeat @bg-position;
+        display: @display;
+        position: @position;
+        background-size: @bg-size;
+        align-items: @alignment;
+        width: @width;
+        height: @height;
 }

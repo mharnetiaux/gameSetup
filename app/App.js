@@ -1,7 +1,7 @@
 import './styles/app.less';
 import React, {Component} from 'react';
 import {render} from 'react-dom';
-import Direction from './keyboard/touch/Direction.js';
+import Direction from './controls/touch/Direction.js';
 import House from './components/House.js';
 import Tank from './components/Tank.js';
 

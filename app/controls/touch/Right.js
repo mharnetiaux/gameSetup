@@ -13,28 +13,28 @@ class Right extends Component{
 
     moveRight(e) {
         const tank = document.querySelector('.tank'),
-              wheel = document.getElementsByClassName('wheel'),
+              wheels = document.getElementsByClassName('wheel'),
               keyCode = e.keyCode;
 
         if(keyCode === 39) {
             this.setState({transStart: this.state.transStart += 1});
             tank.style[this.state.property] = 'translateX(' + this.state.transStart + 'rem)';
             tank.classList.add('move-right');
-            Object.values(wheel).forEach((i) => {
-                i.classList.add("spin");
-                i.classList.remove("autoSpin");
+            Object.values(wheels).forEach((wheel) => {
+                wheel.classList.add("spin");
+                wheel.classList.remove("autoSpin");
             });
         }
     }
 
     stop() {
         const tank = document.querySelector('.tank'),
-              wheel = document.getElementsByClassName('wheel');
+              wheels = document.getElementsByClassName('wheel');
 
         tank.classList.remove('move-right');
 
-        Object.values(wheel).forEach((i) => {
-            i.classList.remove("spin");
+        Object.values(wheels).forEach((wheel) => {
+            wheel.classList.remove("spin");
         });
     }
 

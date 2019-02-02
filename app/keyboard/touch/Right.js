@@ -10,17 +10,26 @@ class Right extends Component{
         };
     }
 
-    moveRight() {
-        const character = document.querySelector('.tank');
-        this.setState({trans: this.state.trans += 40});
-        character.style[this.state.property] = 'translateX(' + this.state.trans + 'rem)';
-        character.classList.add('move-right');
+    moveRight(e) {
+        const character = document.querySelector('.tank'),
+              keyCode = e.keyCode;
+
+
+        if(keyCode === 39) {
+            this.setState({trans: this.state.trans += 1});
+            character.style[this.state.property] = 'translateX(' + this.state.trans + 'rem)';
+            character.classList.add('move-right');
+        }
+    }
+
+    componentDidMount() {
+        document.addEventListener('keydown', this.moveRight, false);
     }
 
     render(){
         return (
             <ul className="rightDirection">
-                <li className="move right" onClick={this.moveRight}>Right Arrow</li>
+                <li className="move right"></li>
             </ul>
         )
     }

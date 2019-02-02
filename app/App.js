@@ -4,10 +4,9 @@ import {render} from 'react-dom';
 import Direction from './keyboard/touch/Direction.js';
 import House from './components/House.js';
 import Tank from './components/Tank.js';
-import "./sandBox/index.js";
-//import styled from 'styled-components';
 
-class App extends Component{
+
+class Game extends Component{
     constructor(){
         super();
         this.state = {};
@@ -29,5 +28,5 @@ class App extends Component{
 }
 
 render((
-    <App/>
+    <Game/>
 ), document.getElementById('root'));

@@ -1,5 +1,5 @@
 .moveObjectRight(
-    @name: moveRight,
+    @name: right,
     @start: 0,
     @finish: 100%,
     @duration: 2s,
@@ -7,7 +7,7 @@
     @timing: linear,
     @mode: forwards) {
 
-    @keyframes moveRight {
+    @keyframes right {
        from {left: @start;}
        to {left: @finish;}
     }
@@ -19,4 +19,9 @@
         @timing: @timing,
         @mode: @mode
     )
+}
+
+
+.moveRight {
+    .moveObjectRight(@finish: 10%, @duration: 5s);
 }

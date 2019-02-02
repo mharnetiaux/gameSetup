@@ -16,7 +16,7 @@ class Right extends Component{
 
 
         if(keyCode === 39) {
-            this.setState({trans: this.state.trans += 1});
+            this.setState({trans: this.state.trans += 3});
             character.style[this.state.property] = 'translateX(' + this.state.trans + 'rem)';
             character.classList.add('move-right');
         }
